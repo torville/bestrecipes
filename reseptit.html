@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Website</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <style>
+      .full-height {
+        min-height: 100vh; /* Instead of 'height' use 'min-height' */
+      }
+
+      .row-height-1 {
+        height: 10%;
+        z-index: 1;
+        position: relative;
+      }
+
+      .row-height-9 {
+        height: 90%;
+        background-image: url("4.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 2%;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: 200px; /* Adjust this value according to your needs */
+        object-fit: cover;
+        border-radius: 15px;
+      }
+
+      /* Responsive Image Sizes */
+      @media screen and (min-width: 576px) {
+        .image-container img {
+          height: 250px;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .image-container img {
+          height: 300px;
+        }
+      }
+
+      @media screen and (min-width: 992px) {
+        .image-container img {
+          height: 350px;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        .image-container img {
+          height: 400px;
+        }
+      }
+
+      .caption {
+        color: #0a0909; /* change to a deep brown color */
+        font-size: 1.3em; /* slightly larger font */
+        font-weight: bold; /* make the text bold */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* add a subtle shadow for a 3D effect */
+        margin-top: 35px;
+        margin-bottom: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif, serif; /* a nicer, serif font */
+      }
+
+      .title-container {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
+        margin: 20px auto;
+        font-family: "Roboto", sans-serif; /* You can replace this with any sans-serif font of your choice */
+      }
+
+      @media (max-width: 768px) {
+        .title-container {
+          padding: 15px;
+          margin: 15px auto;
+          border-radius: 5px;
+        }
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      .navbar {
+        background-color: #ffc107; /* Changed to a light amber color */
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      }
+      .navbar-nav .nav-link {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700; /* Make the text bold. */
+        text-transform: uppercase; /* Convert the text to uppercase. */
+        color: #222222; /* Dark color for contrast with amber */
+        transition: all 0.3s; /* Smooth transition for hover effects */
+        padding: 0.5em 1em; /* Added vertical padding for a nicer touch */
+        border-radius: 5px; /* Added for a bit rounded corners */
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #ffc107; /* Light color transition for hover */
+        background-color: #222222; /* Dark background color on hover */
+      }
+
+      .navbar-brand {
+        font-size: 1.5em; /* Make the brand/logo larger */
+      }
+
+      .navbar-nav .nav-link {
+        padding: 0.5em 1em; /* Added vertical padding for a nicer touch */
+        border-radius: 5px; /* Added for a bit rounded corners */
+      }
+
+      .intro-text {
+        padding: 20px;
+        font-size: 1.5em;
+        color: #333;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        border: 8.5px solid #000; /* Add this line to create a black border */
+        margin: 20px;
+      }
+
+      .footer {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #ffc107; /* Muutettu taustaväri vaalean meripihkan väriksi yhteensoveltuvuuden varmistamiseksi navbarin kanssa */
+        color: #000000; /* Värinvaihto mustaksi luettavuuden parantamiseksi */
+        text-align: center;
+        padding: 10px 0;
+        border-top: 2px solid #000000; /* Lisätty musta reunaviiva yläpuolelle kontrastia varten */
+        font-family: "Roboto", sans-serif; /* Lisätty samat fontit kuin navbarissa */
+        font-weight: 700; /* Bold teksti */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="Your Logo" style="height: 65px" />
+        <!-- You can adjust the height and width as needed -->
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Etusivu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reseptit.html">Reseptit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tietoiskut.html">Tietoiskut</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="otayhteytta.html">Ota Yhteyttä</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid full-height">
+      <div class="row row-height-1" style="background-color: #c98474">
+        <!-- This section will take up 1/10 of the page height -->
+      </div>
+      <div class="row row-height-9">
+        <!-- This section will take up 9/10 of the page height -->
+        <div class="title-container">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <p class="intro-text">
+                Reseptejä pääset katsomaan kuvaa klikkaamalla :)
+              </p>
+            </div>
+            <div class="col-10 col-sm-8 col-md-6 col-lg-4 image-container">
+              <p class="caption">Erilainen Pizza</p>
+              <a
+                href="https://www.kotikokki.net/reseptit/nayta/205709/V%C3%A4h%C3%A4n%20erilainen%20pizza./"
+              >
+                <img src="erilainenpizza.jpg" alt="Image 2" />
+              </a>
+            </div>
+            <div class="col-10 col-sm-8 col-md-6 col-lg-4 image-container">
+              <p class="caption">Kasvishyytelö</p>
+              <a
+                href="https://www.kotikokki.net/reseptit/nayta/222039/Kasvishyytel%C3%B6/"
+              >
+                <img src="kasvishyytelo.jpg" alt="Image 2" />
+              </a>
+            </div>
+            <div class="col-10 col-sm-8 col-md-6 col-lg-4 image-container">
+              <p class="caption">Super upee nakkitalo</p>
+              <a
+                href="https://www.kotikokki.net/reseptit/nayta/380322/super%20upee%20nakkitalo/"
+              >
+                <img src="nakkitalo.jpg" alt="Image 2" />
+              </a>
+            </div>
+            <div class="col-10 col-sm-8 col-md-6 col-lg-4 image-container">
+              <p class="caption">Karpalomehu</p>
+              <a
+                href="https://www.kotikokki.net/reseptit/nayta/277140/Tarjan%20karpalomehu./"
+              >
+                <img src="karpalomehu.jpg" alt="Image 2" />
+              </a>
+            </div>
+            <div class="col-10 col-sm-8 col-md-6 col-lg-4 image-container">
+              <p class="caption">Viskiä maistanut suklaakakku</p>
+              <a
+                href="https://www.kotikokki.net/reseptit/nayta/250114/Viski%C3%A4%20Maistanut%20SuklaaKakku/"
+              >
+                <img src="suklaakakku.jpg" alt="Image 2" />
+              </a>
+            </div>
+            <div class="col-10 col-sm-8 col-md-6 col-lg-4 image-container">
+              <p class="caption">Broilerin suikaleliha kastike</p>
+              <a
+                href="https://www.kotikokki.net/reseptit/nayta/293444/BROILERIN%20SUIKALELIHA%20KASTIKE./"
+              >
+                <img src="suikalelihakastike.jpg" alt="Image 2" />
+              </a>
+            </div>
+            <div class="col-10 col-sm-8 col-md-6 col-lg-4 image-container">
+              <p class="caption">Keitetyt kananmunat</p>
+              <a
+                href="https://www.kotikokki.net/reseptit/nayta/11427/Keitetyt%20kananmunat%2027.2.07/"
+              >
+                <img src="kananmunat.jpg" alt="Image 2" />
+              </a>
+            </div>
+            <div class="col-10 col-sm-8 col-md-6 col-lg-4 image-container">
+              <p class="caption">Ismon makkaravoileivät</p>
+              <a
+                href="https://www.kotikokki.net/reseptit/nayta/831374/Ismon%20makkaravoileiv%C3%A4t/"
+              >
+                <img src="leivat.jpg" alt="Image 2" />
+              </a>
+            </div>
+            <div class="col-10 col-sm-8 col-md-6 col-lg-4 image-container">
+              <p class="caption">Makkarasiili 2007</p>
+              <a
+                href="https://www.kotikokki.net/reseptit/nayta/6923/Makkarasiili%202007/"
+              >
+                <img src="makkarasiili.jpg" alt="Image 2" />
+              </a>
+            </div>
+            <div class="col-10 col-sm-8 col-md-6 col-lg-4 image-container">
+              <p class="caption">Ranet ja kanakastike</p>
+              <a
+                href="https://www.kotikokki.net/reseptit/nayta/405016/Ranet%20ja%20kanakastike/"
+              >
+                <img src="ranet.jpg" alt="Image 2" />
+              </a>
+            </div>
+            <div class="col-10 col-sm-8 col-md-6 col-lg-4 image-container">
+              <p class="caption">Pizza</p>
+              <a
+                href="https://www.kotikokki.net/reseptit/nayta/221190/Jauhelihapizza/"
+              >
+                <img src="pizza.jpg" alt="Image 2" />
+              </a>
+            </div>
+            <div class="col-10 col-sm-8 col-md-6 col-lg-4 image-container">
+              <p class="caption">Banaani mikrossa</p>
+              <a
+                href="https://www.kotikokki.net/reseptit/nayta/52276/Banaani%20mikrossa/"
+              >
+                <img src="banaani.jpg" alt="Image 2" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer hidden">
+      <div class="container">
+        <p>Osoitekatu 123, 00000 Kaupunki, Suomi</p>
+        <p>Sähköposti: info@example.com</p>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

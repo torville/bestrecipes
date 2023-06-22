@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Website</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      .container-fluid.full-height {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Set minimum height to viewport height */
+      }
+
+      .row-height-9 {
+        flex: 9;
+        background-image: url("4.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .title-container {
+        margin-top: -70px; /* Add this line to give some space from the top of the section */
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .title-container p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: #333;
+        font-family: "Georgia", "Times New Roman", Times, serif;
+      }
+
+      .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 10px;
+      }
+
+      .caption {
+        color: #333;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+      }
+
+      .navbar {
+        background-color: #ffc107; /* Changed to a light amber color */
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+      .navbar-nav .nav-link {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700; /* Make the text bold. */
+        text-transform: uppercase; /* Convert the text to uppercase. */
+        color: #222222; /* Dark color for contrast with amber */
+        transition: all 0.3s; /* Smooth transition for hover effects */
+        padding: 0.5em 1em; /* Added vertical padding for a nicer touch */
+        border-radius: 5px; /* Added for a bit rounded corners */
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #ffc107; /* Light color transition for hover */
+        background-color: #222222; /* Dark background color on hover */
+      }
+
+      .navbar-brand {
+        font-size: 1.5em; /* Make the brand/logo larger */
+      }
+
+      .navbar-nav .nav-link {
+        padding: 0.5em 1em; /* Added vertical padding for a nicer touch */
+        border-radius: 5px; /* Added for a bit rounded corners */
+      }
+
+      @media screen and (min-width: 600px) {
+        .title-container a img {
+          width: 80%;
+        }
+      }
+
+      .footer {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #ffc107; /* Muutettu taustaväri vaalean meripihkan väriksi yhteensoveltuvuuden varmistamiseksi navbarin kanssa */
+        color: #000000; /* Värinvaihto mustaksi luettavuuden parantamiseksi */
+        text-align: center;
+        padding: 10px 0;
+        border-top: 2px solid #000000; /* Lisätty musta reunaviiva yläpuolelle kontrastia varten */
+        font-family: "Roboto", sans-serif; /* Lisätty samat fontit kuin navbarissa */
+        font-weight: 700; /* Bold teksti */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="Your Logo" style="height: 65px" />
+        <!-- You can adjust the height and width as needed -->
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Etusivu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reseptit.html">Reseptit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tietoiskut.html">Tietoiskut</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="otayhteytta.html">Ota Yhteyttä</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid full-height">
+      <div class="row row-height-1">
+        <!-- This section will take up 1/10 of the page height -->
+      </div>
+      <div class="row row-height-9" style="background-color: #e9ecef">
+        <!-- This section will take up 9/10 of the page height -->
+        <!-- Background image is set in CSS -->
+        <div class="title-container">
+          <h1
+            style="
+              text-align: center;
+              color: #000000;
+              font-family: Arial, sans-serif;
+              font-size: 3em;
+              padding-bottom: 0.5em;
+            "
+          >
+            Tervetuloa!
+          </h1>
+          <h2
+            style="
+              text-align: center;
+              color: #000000;
+              font-family: Arial, sans-serif;
+              font-size: 1.5em;
+              padding-bottom: 1em;
+            "
+          >
+            Keittiö ja kulinaarinen uteliaisuus kohtaavat
+          </h2>
+          <p
+            style="
+              font-size: 1.2em;
+              line-height: 1.6;
+              color: #000000;
+              font-family: 'Georgia', 'Times New Roman', Times, serif;
+            "
+          >
+            Inspiraatio, oppiminen ja nautinto yhdistyvät uudella
+            nettisivullamme. Tarjoamme herkullisia reseptejä, jotka sopivat niin
+            aloittelijoille kuin kokeneille kotikokeillekin. Jokaisen reseptin
+            yhteydessä on selkeä ja värikäs kuva, jotta voit hahmottaa
+            lopputuloksen jo etukäteen. Etsit sitten perinteistä kotiruokaa tai
+            haluat kokeilla jotakin uutta ja eksoottista, löydät varmasti
+            sopivan reseptin.
+          </p>
+          <h2
+            style="
+              text-align: center;
+              color: #000000;
+              font-family: Arial, sans-serif;
+              font-size: 1.5em;
+              padding-top: 1em;
+            "
+          >
+            Tietoa ja vinkkejä
+          </h2>
+          <p
+            style="
+              font-size: 1.2em;
+              line-height: 1.6;
+              color: #000000;
+              font-family: 'Georgia', 'Times New Roman', Times, serif;
+            "
+          >
+            "Tietoiskut" -välilehti tarjoaa informatiivisia ja inspiroivia
+            tietoiskuja. Haluatko tietää enemmän viljalaaduista, hedelmien
+            terveysvaikutuksista tai lihan kypsyysasteista? Tältä välilehdeltä
+            löydät vastauksia ja paljon muuta.
+          </p>
+          <h2
+            style="
+              text-align: center;
+              color: #000000;
+              font-family: Arial, sans-serif;
+              font-size: 1.5em;
+              padding-top: 1em;
+            "
+          >
+            Olemme täällä sinua varten
+          </h2>
+          <p
+            style="
+              font-size: 1.2em;
+              line-height: 1.6;
+              color: #000000;
+              font-family: 'Georgia', 'Times New Roman', Times, serif;
+            "
+          >
+            "Ota yhteyttä" -sivu on suunniteltu sinua varten. Olemme aina
+            avoimia palautteelle, kysymyksille tai ehdotuksille. Halusitpa
+            sitten esittää kysymyksen, antaa palautetta tai ehdottaa uutta
+            reseptiä, olemme aina valmiita kuulemaan sinua.
+          </p>
+          <h2
+            style="
+              text-align: center;
+              color: #000000;
+              font-family: Arial, sans-serif;
+              font-size: 1.5em;
+              padding-top: 1em;
+            "
+          >
+            Lämpimästi tervetuloa!
+          </h2>
+          <p
+            style="
+              font-size: 1.2em;
+              line-height: 1.6;
+              color: #000000;
+              font-family: 'Georgia', 'Times New Roman', Times, serif;
+            "
+          >
+            Olemme sitoutuneet tarjoamaan sinulle parhaan mahdollisen kokemuksen
+            ja auttamaan sinua matkallasi kulinaariseen mestaruuteen. Toivotamme
+            sinut lämpimästi tervetulleeksi sivustollemme!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer hidden">
+      <div class="container">
+        <p>Osoitekatu 123, 00000 Kaupunki, Suomi</p>
+        <p>Sähköposti: info@example.com</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

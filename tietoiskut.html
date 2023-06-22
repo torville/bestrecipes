@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Website</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <style>
+      .container-fluid.full-height {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .row-height-1 {
+        flex: 1;
+        z-index: 1;
+        position: relative;
+      }
+
+      .row-height-9 {
+        flex: 9;
+        background-image: url("4.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 2%;
+      }
+
+      .big-section,
+      .title-container {
+        background: white;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        padding: 20px;
+        width: 80%;
+        margin: auto;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .section,
+      .image-container {
+        background: white;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 10px;
+        border: 10.5px solid black;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .image-container img {
+        width: 2800px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+
+      .caption,
+      .intro-text {
+        color: #333;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+        padding: 20px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        margin: 20px;
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+      .navbar {
+        background-color: #ffc107; /* Changed to a light amber color */
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      }
+      .navbar-nav .nav-link {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700; /* Make the text bold. */
+        text-transform: uppercase; /* Convert the text to uppercase. */
+        color: #222222; /* Dark color for contrast with amber */
+        transition: all 0.3s; /* Smooth transition for hover effects */
+        padding: 0.5em 1em; /* Added vertical padding for a nicer touch */
+        border-radius: 5px; /* Added for a bit rounded corners */
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #ffc107; /* Light color transition for hover */
+        background-color: #222222; /* Dark background color on hover */
+      }
+
+      .navbar-brand {
+        font-size: 1.5em; /* Make the brand/logo larger */
+      }
+
+      .navbar-nav .nav-link {
+        padding: 0.5em 1em; /* Added vertical padding for a nicer touch */
+        border-radius: 5px; /* Added for a bit rounded corners */
+      }
+
+      @media screen and (min-width: 600px) {
+        .title-container a img,
+        .big-section a img {
+          width: 80%;
+        }
+      }
+
+      .footer {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #ffc107; /* Muutettu taustaväri vaalean meripihkan väriksi yhteensoveltuvuuden varmistamiseksi navbarin kanssa */
+        color: #000000; /* Värinvaihto mustaksi luettavuuden parantamiseksi */
+        text-align: center;
+        padding: 10px 0;
+        border-top: 2px solid #000000; /* Lisätty musta reunaviiva yläpuolelle kontrastia varten */
+        font-family: "Roboto", sans-serif; /* Lisätty samat fontit kuin navbarissa */
+        font-weight: 700; /* Bold teksti */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="Your Logo" style="height: 65px" />
+        <!-- You can adjust the height and width as needed -->
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Etusivu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reseptit.html">Reseptit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tietoiskut.html">Tietoiskut</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="otayhteytta.html">Ota Yhteyttä</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid full-height">
+      <div class="row row-height-1">
+        <!-- Your navigation bar -->
+      </div>
+      <div class="row row-height-9" style="background-color: #e9ecef">
+        <div class="big-section">
+          <div class="section">
+            <h1>Omena</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              blandit urna a lectus eleifend ultricies. Vivamus semper, risus at
+              consectetur finibus, eros est interdum nisl, eu ultrices est
+              tellus a ligula. Vestibulum at facilisis purus. Donec dapibus quam
+              et augue efficitur, vel scelerisque velit facilisis. Integer
+              ultrices sagittis diam, sit amet feugiat nisi convallis sed.
+              Pellentesque fringilla dui risus, vel dapibus enim pulvinar non.
+              Mauris finibus sollicitudin ante ut consectetur. Suspendisse
+              potenti. Sed pretium tortor eu nunc pulvinar, vitae feugiat mi
+              rhoncus. Nam vel enim lorem. Fusce sit amet libero vitae urna
+              elementum consequat. Nunc ut sem ac dui eleifend commodo ut id
+              turpis. Donec euismod, lorem non luctus interdum, nulla felis
+              suscipit ipsum, ut suscipit neque lorem ac enim. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Sed blandit urna a lectus
+              eleifend ultricies. Vivamus semper, risus at consectetur finibus,
+              eros est interdum nisl, eu ultrices est tellus a ligula.
+              Vestibulum at facilisis purus. Donec dapibus quam et augue
+              efficitur, vel scelerisque velit facilisis. Integer ultrices
+              sagittis diam, sit amet feugiat nisi convallis sed. Pellentesque
+              fringilla dui risus, vel dapibus enim pulvinar non. Mauris finibus
+              sollicitudin ante ut consectetur. Suspendisse potenti. Sed pretium
+              tortor eu nunc pulvinar, vitae feugiat mi rhoncus. Nam vel enim
+              lorem. Fusce sit amet libero vitae urna elementum consequat. Nunc
+              ut sem ac dui eleifend commodo ut id turpis. Donec euismod, lorem
+              non luctus interdum, nulla felis suscipit ipsum, ut suscipit neque
+              lorem ac enim. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Sed blandit urna a lectus eleifend ultricies. Vivamus
+              semper, risus at consectetur finibus, eros est interdum nisl, eu
+              ultrices est tellus a ligula. Vestibulum at facilisis purus. Donec
+              dapibus quam et augue efficitur, vel scelerisque velit facilisis.
+              Integer ultrices sagittis diam, sit amet feugiat nisi convallis
+              sed. Pellentesque fringilla dui risus, vel dapibus enim pulvinar
+              non. Mauris finibus sollicitudin ante ut consectetur. Suspendisse
+              potenti. Sed pretium tortor eu nunc pulvinar, vitae feugiat mi
+              rhoncus. Nam vel enim lorem. Fusce sit amet libero vitae urna
+              elementum consequat. Nunc ut sem ac dui eleifend commodo ut id
+              turpis. Donec euismod, lorem non luctus interdum, nulla felis
+              suscipit ipsum, ut suscipit neque lorem ac enim.
+            </p>
+          </div>
+          <div class="section">
+            <h2>Ruis</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              blandit urna a lectus eleifend ultricies. Vivamus semper, risus at
+              consectetur finibus, eros est interdum nisl, eu ultrices est
+              tellus a ligula. Vestibulum at facilisis purus. Donec dapibus quam
+              et augue efficitur, vel scelerisque velit facilisis. Integer
+              ultrices sagittis diam, sit amet feugiat nisi convallis sed.
+              Pellentesque fringilla dui risus, vel dapibus enim pulvinar non.
+              Mauris finibus sollicitudin ante ut consectetur. Suspendisse
+              potenti. Sed pretium tortor eu nunc pulvinar, vitae feugiat mi
+              rhoncus. Nam vel enim lorem. Fusce sit amet libero vitae urna
+              elementum consequat. Nunc ut sem ac dui eleifend commodo ut id
+              turpis. Donec euismod, lorem non luctus interdum, nulla felis
+              suscipit ipsum, ut suscipit neque lorem ac enim. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Sed blandit urna a lectus
+              eleifend ultricies. Vivamus semper, risus at consectetur finibus,
+              eros est interdum nisl, eu ultrices est tellus a ligula.
+              Vestibulum at facilisis purus. Donec dapibus quam et augue
+              efficitur, vel scelerisque velit facilisis. Integer ultrices
+              sagittis diam, sit amet feugiat nisi convallis sed. Pellentesque
+              fringilla dui risus, vel dapibus enim pulvinar non. Mauris finibus
+              sollicitudin ante ut consectetur. Suspendisse potenti. Sed pretium
+              tortor eu nunc pulvinar, vitae feugiat mi rhoncus. Nam vel enim
+              lorem. Fusce sit amet libero vitae urna elementum consequat. Nunc
+              ut sem ac dui eleifend commodo ut id turpis. Donec euismod, lorem
+              non luctus interdum, nulla felis suscipit ipsum, ut suscipit neque
+              lorem ac enim. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Sed blandit urna a lectus eleifend ultricies. Vivamus
+              semper, risus at consectetur finibus, eros est interdum nisl, eu
+              ultrices est tellus a ligula. Vestibulum at facilisis purus. Donec
+              dapibus quam et augue efficitur, vel scelerisque velit facilisis.
+              Integer ultrices sagittis diam, sit amet feugiat nisi convallis
+              sed. Pellentesque fringilla dui risus, vel dapibus enim pulvinar
+              non. Mauris finibus sollicitudin ante ut consectetur. Suspendisse
+              potenti. Sed pretium tortor eu nunc pulvinar, vitae feugiat mi
+              rhoncus. Nam vel enim lorem. Fusce sit amet libero vitae urna
+              elementum consequat. Nunc ut sem ac dui eleifend commodo ut id
+              turpis. Donec euismod, lorem non luctus interdum, nulla felis
+              suscipit ipsum, ut suscipit neque lorem ac enim.
+            </p>
+          </div>
+          <div class="section">
+            <h2>Naudanlihan kypsyysaste</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              blandit urna a lectus eleifend ultricies. Vivamus semper, risus at
+              consectetur finibus, eros est interdum nisl, eu ultrices est
+              tellus a ligula. Vestibulum at facilisis purus. Donec dapibus quam
+              et augue efficitur, vel scelerisque velit facilisis. Integer
+              ultrices sagittis diam, sit amet feugiat nisi convallis sed.
+              Pellentesque fringilla dui risus, vel dapibus enim pulvinar non.
+              Mauris finibus sollicitudin ante ut consectetur. Suspendisse
+              potenti. Sed pretium tortor eu nunc pulvinar, vitae feugiat mi
+              rhoncus. Nam vel enim lorem. Fusce sit amet libero vitae urna
+              elementum consequat. Nunc ut sem ac dui eleifend commodo ut id
+              turpis. Donec euismod, lorem non luctus interdum, nulla felis
+              suscipit ipsum, ut suscipit neque lorem ac enim. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Sed blandit urna a lectus
+              eleifend ultricies. Vivamus semper, risus at consectetur finibus,
+              eros est interdum nisl, eu ultrices est tellus a ligula.
+              Vestibulum at facilisis purus. Donec dapibus quam et augue
+              efficitur, vel scelerisque velit facilisis. Integer ultrices
+              sagittis diam, sit amet feugiat nisi convallis sed. Pellentesque
+              fringilla dui risus, vel dapibus enim pulvinar non. Mauris finibus
+              sollicitudin ante ut consectetur. Suspendisse potenti. Sed pretium
+              tortor eu nunc pulvinar, vitae feugiat mi rhoncus. Nam vel enim
+              lorem. Fusce sit amet libero vitae urna elementum consequat. Nunc
+              ut sem ac dui eleifend commodo ut id turpis. Donec euismod, lorem
+              non luctus interdum, nulla felis suscipit ipsum, ut suscipit neque
+              lorem ac enim. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Sed blandit urna a lectus eleifend ultricies. Vivamus
+              semper, risus at consectetur finibus, eros est interdum nisl, eu
+              ultrices est tellus a ligula. Vestibulum at facilisis purus. Donec
+              dapibus quam et augue efficitur, vel scelerisque velit facilisis.
+              Integer ultrices sagittis diam, sit amet feugiat nisi convallis
+              sed. Pellentesque fringilla dui risus, vel dapibus enim pulvinar
+              non. Mauris finibus sollicitudin ante ut consectetur. Suspendisse
+              potenti. Sed pretium tortor eu nunc pulvinar, vitae feugiat mi
+              rhoncus. Nam vel enim lorem. Fusce sit amet libero vitae urna
+              elementum consequat. Nunc ut sem ac dui eleifend commodo ut id
+              turpis. Donec euismod, lorem non luctus interdum, nulla felis
+              suscipit ipsum, ut suscipit neque lorem ac enim.
+            </p>
+          </div>
+          <div class="section">
+            <h2>Kanttarelli</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              blandit urna a lectus eleifend ultricies. Vivamus semper, risus at
+              consectetur finibus, eros est interdum nisl, eu ultrices est
+              tellus a ligula. Vestibulum at facilisis purus. Donec dapibus quam
+              et augue efficitur, vel scelerisque velit facilisis. Integer
+              ultrices sagittis diam, sit amet feugiat nisi convallis sed.
+              Pellentesque fringilla dui risus, vel dapibus enim pulvinar non.
+              Mauris finibus sollicitudin ante ut consectetur. Suspendisse
+              potenti. Sed pretium tortor eu nunc pulvinar, vitae feugiat mi
+              rhoncus. Nam vel enim lorem. Fusce sit amet libero vitae urna
+              elementum consequat. Nunc ut sem ac dui eleifend commodo ut id
+              turpis. Donec euismod, lorem non luctus interdum, nulla felis
+              suscipit ipsum, ut suscipit neque lorem ac enim. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Sed blandit urna a lectus
+              eleifend ultricies. Vivamus semper, risus at consectetur finibus,
+              eros est interdum nisl, eu ultrices est tellus a ligula.
+              Vestibulum at facilisis purus. Donec dapibus quam et augue
+              efficitur, vel scelerisque velit facilisis. Integer ultrices
+              sagittis diam, sit amet feugiat nisi convallis sed. Pellentesque
+              fringilla dui risus, vel dapibus enim pulvinar non. Mauris finibus
+              sollicitudin ante ut consectetur. Suspendisse potenti. Sed pretium
+              tortor eu nunc pulvinar, vitae feugiat mi rhoncus. Nam vel enim
+              lorem. Fusce sit amet libero vitae urna elementum consequat. Nunc
+              ut sem ac dui eleifend commodo ut id turpis. Donec euismod, lorem
+              non luctus interdum, nulla felis suscipit ipsum, ut suscipit neque
+              lorem ac enim. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Sed blandit urna a lectus eleifend ultricies. Vivamus
+              semper, risus at consectetur finibus, eros est interdum nisl, eu
+              ultrices est tellus a ligula. Vestibulum at facilisis purus. Donec
+              dapibus quam et augue efficitur, vel scelerisque velit facilisis.
+              Integer ultrices sagittis diam, sit amet feugiat nisi convallis
+              sed. Pellentesque fringilla dui risus, vel dapibus enim pulvinar
+              non. Mauris finibus sollicitudin ante ut consectetur. Suspendisse
+              potenti. Sed pretium tortor eu nunc pulvinar, vitae feugiat mi
+              rhoncus. Nam vel enim lorem. Fusce sit amet libero vitae urna
+              elementum consequat. Nunc ut sem ac dui eleifend commodo ut id
+              turpis. Donec euismod, lorem non luctus interdum, nulla felis
+              suscipit ipsum, ut suscipit neque lorem ac enim.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer hidden">
+      <div class="container">
+        <p>Osoitekatu 123, 00000 Kaupunki, Suomi</p>
+        <p>Sähköposti: info@example.com</p>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
